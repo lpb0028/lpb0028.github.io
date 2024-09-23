@@ -6,27 +6,31 @@
     <h2>class of 2028</h2>
     <h5 id="dev_note">Website is a work in progress...</h5>
     <style>
-        #div_1 {
-            fill: aquamarine;
+        .primary_color {
+            width:fit-content;
+            height: fit-content;
+            background-color: rgb(110, 222, 185);
         }
-        #div_2 {
-            fill: azure;
+        .secondary_color {
+            width:fit-content;
+            height: fit-content;
+            background-color: aquamarine;
         }
         #dev_note {
             color: red;
         }
     </style>
-    <div id="div_1">
+    <div class="primary_color">
         <h3>My favorite places on campus</h3>
-        <h5>
+        <h5 class="secondary_color">
             Benches outside starbucks<br>
             Dining hall upstairs glass rooms<br>
             Goodwin hall piano practice rooms
         </h5>
     </div>
-    <div id="div_2">
+    <div>
         <h3>Web Dev Learning Goals</h3>
-        <h5>
+        <h5 class="secondary_color">
             HTML semantics<br>
             Javascript-element interactions<br>
             CSS Animations
