@@ -6,19 +6,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body {
+                position: relative;
                 margin: 0;
                 padding: 0;
                 height: 100%;
                 overflow-x: hidden;
             }
-            .svg-background {
-                top: 0;
+            .background {
+                position: absolute;
+                top: -40%;
                 left: 0;
                 width: 100%;
                 height: 100%;
                 z-index: -1;
             }
-            .content {
+            .foreground {
+                position: absolute;
+                top: 0;
+                left: 0;
                 z-index: 1;
             }
             #dev_note {
@@ -28,12 +33,12 @@
     </head>
     <body>
         <!--Background-->
-        <svg class="svg-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800"></svg>
+        <svg class="background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800"></svg>
             <img src="mountain_background.svg" alt="Mountain Background">
             <!-- Add more SVG elements as needed -->
         </svg>
         <!--Content-->
-        <div class="content">
+        <div class="foreground">
             <h1>Logan Banyai</h1>
             <h2>class of 2028</h2>
             <h5 id="dev_note">Website is a work in progress...</h5>
