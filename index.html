@@ -7,56 +7,78 @@
             body {
                 margin: 0;
                 padding: 0;
-                height: 100%;
                 overflow-x: hidden;
             }
             .background {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 50%;
-                height: 50%;
                 z-index: -1;
+            }
+            #mountain {
+                position: absolute;
+                top: -100px;
+                left: -200px;
+                height: 1000px; 
+                width: 3000px;
+            }
+            #background_region {
+                position: absolute;
+                top: 800px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(10.783386%, 16.085815%, 17.240906%);
             }
             .foreground {
                 position: absolute;
                 top: 0;
                 left: 0;
                 z-index: 1;
+                width: 100%;
+                height: 100%
             }
             #dev_note {
                 color: crimson;
+                size: 40;
+            }
+            #div1 {
+                width: 100%;
+                height: auto;
+            }
+            .header_container {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: flex-end;
+            }
+            .header_button {
+                background: none;
+                border: 0;
+            }
+            .scaled_img {
+                width: 150%;
+                height: 150%;
             }
         </style>
     </head>
     <body>
         <!--Background-->
-        <svg class="background" xmlns="http://www.w3.org/2000/svg"></svg>
-            <img src="mountain_background.svg" alt="Mountain Background">
-            <!-- Add more SVG elements as needed -->
-        </svg>
+        <div class="background">
+            <img id="mountain" src="mountain_background.svg" alt="Mountain Background">
+            <div id="background_region"></div>
+        </div>
         <!--Content-->
         <div class="foreground">
-            <h1>Logan Banyai</h1>
-            <h2>class of 2028</h2>
-            <h5 id="dev_note">Website is a work in progress...</h5>
-            <div class="primary_color">
-                <h3>My favorite places on campus</h3>
-                <h5 class="secondary_color">
-                    Benches outside starbucks<br>
-                    Dining hall upstairs glass rooms<br>
-                    Goodwin hall piano practice rooms
-                </h5>
+            <div class="header_container">
+                <button class="header_button">
+                    <img class="scaled_img" src="home.svg" alt="Home Button">
+                </button>
             </div>
-            <div class="primary_color">
-                <h3>Web Dev Learning Goals</h3>
-                <h5 class="secondary_color">
-                    HTML semantics<br>
-                    Javascript-element interactions<br>
-                    CSS Animations
-                </h5>
+            <div id="div1">
+                <h1>Logan Banyai</h1>
+                <h2>class of 2028</h2>
+                <p id="dev_note">
+                    &lt;development in progress&gt;
+                </p>
             </div>
-            <img src="meme.jpg" alt="Ight imma head out meme">
         </div>
         
     </body>
